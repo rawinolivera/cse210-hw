@@ -59,7 +59,7 @@ class Program
         if (grade >= 70){
             Console.Write("Congratulations!! You passed the class!!");
         } else {
-            Console.Write("Sorry you did not pass the class! You should consider work hard to success nest time!");
+            Console.Write("Sorry you did not pass the class! You should consider work hard to success next time!");
         }
     }
 }
