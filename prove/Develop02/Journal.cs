@@ -15,6 +15,7 @@ class Journal{
                 outputFile.WriteLine(entry._response);
             }
         }
+        Console.WriteLine("Journal Saved!!");
     }
 
     public void LoadJournal(){
@@ -23,7 +24,6 @@ class Journal{
 
         int side = lines.Length;
         side = side - 1;
-        Console.WriteLine(side);
         
         int i = 0;
         int j = 1;
@@ -31,17 +31,21 @@ class Journal{
         for(int f = 0; f <= side; f = f + 3){ 
             
             Entry entry = new Entry();
+            //getting different positions from the array
             entry._date = lines[i];   //0, 3
             entry._prompt = lines[j];  //1,4
             entry._response = lines[k];   //2,5
+            //incrementing the indexes
             i = i + 3;
             j = j + 3;
             k = k + 3;
             _entries.Add(entry);
         }
+        Console.WriteLine("Journal Loaded!!");
     }
 
     public void DisplayJournal(){
+        Console.WriteLine();
         foreach(Entry entry in _entries){
             entry.DisplayEntry();
         }   
@@ -75,6 +79,7 @@ class Journal{
                     if(marca == random){
 
                         Console.WriteLine($"Prompt: {prompt}");
+                        Console.Write("Your response: ");
                         string data = Console.ReadLine();
                         //creamosl el objeto entry
                         Entry entry = new Entry();
