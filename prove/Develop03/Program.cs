@@ -4,6 +4,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello Develop03 World!");
+        Referenc refer = new Referenc();
+        Console.WriteLine(refer.GetScriptureRef());
     }
 }
